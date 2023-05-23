@@ -2,7 +2,11 @@ cmake_minimum_required(VERSION 3.25)
 
 project(SerialDebug VERSION 0.1 LANGUAGES CXX)
 
-find_package(Qt6 REQUIRED COMPONENTS Widgets)
+#添加串口模块find_package(Qt6 REQUIRED COMPONENTS Core Gui  )Qt6::Core Qt6::Gui
+find_package(Qt6 REQUIRED COMPONENTS Widgets SerialPort)
+
+
+
 
 qt_standard_project_setup()
 
@@ -24,6 +28,7 @@ target_compile_features(SerialDebug PRIVATE cxx_std_20)
 target_link_libraries(SerialDebug 
     PRIVATE 
         Qt6::Widgets
+        Qt6::SerialPort #链接该模块
 )
 
 

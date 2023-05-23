@@ -2,6 +2,9 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QSerialPort>
+#include <QDebug>
+#include <QtSerialPort/QSerialPortInfo>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
