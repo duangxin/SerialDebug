@@ -18,7 +18,12 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+private slots:
+    void on_ctrlSerialButton_clicked();     //打开/关闭串口
+
 private:
+    QSerialPort *m_serial;
+
     Ui::MainWindow *ui;
 };
 #endif // MAINWINDOW_H

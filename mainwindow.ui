@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>814</width>
-    <height>574</height>
+    <width>812</width>
+    <height>572</height>
    </rect>
   </property>
   <property name="focusPolicy">
@@ -19,223 +19,245 @@
   <widget class="QWidget" name="centralwidget">
    <layout class="QHBoxLayout" name="horizontalLayout_12">
     <item>
-     <layout class="QHBoxLayout" name="horizontalLayout_11">
+     <layout class="QVBoxLayout" name="verticalLayout_4">
+      <property name="sizeConstraint">
+       <enum>QLayout::SetDefaultConstraint</enum>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
       <item>
-       <layout class="QVBoxLayout" name="verticalLayout_4">
-        <property name="sizeConstraint">
-         <enum>QLayout::SetDefaultConstraint</enum>
+       <widget class="QPlainTextEdit" name="recieveTxt">
+        <property name="minimumSize">
+         <size>
+          <width>550</width>
+          <height>350</height>
+         </size>
         </property>
-        <property name="rightMargin">
-         <number>0</number>
+        <property name="maximumSize">
+         <size>
+          <width>550</width>
+          <height>350</height>
+         </size>
         </property>
+        <property name="readOnly">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="verticalSpacer">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Fixed</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPlainTextEdit" name="sendTxt">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>550</width>
+          <height>148</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>550</width>
+          <height>148</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_1">
         <item>
-         <widget class="QPlainTextEdit" name="recieveTxt">
-          <property name="minimumSize">
-           <size>
-            <width>550</width>
-            <height>350</height>
-           </size>
-          </property>
-          <property name="maximumSize">
-           <size>
-            <width>550</width>
-            <height>350</height>
-           </size>
-          </property>
-          <property name="readOnly">
-           <bool>true</bool>
+         <widget class="QLabel" name="searchLabel">
+          <property name="text">
+           <string>搜索串口</string>
           </property>
          </widget>
         </item>
         <item>
-         <spacer name="verticalSpacer">
-          <property name="orientation">
-           <enum>Qt::Vertical</enum>
+         <widget class="QComboBox" name="searchCombo"/>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QLabel" name="baudLabel">
+          <property name="text">
+           <string>波特率</string>
           </property>
-          <property name="sizeType">
-           <enum>QSizePolicy::Fixed</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>20</width>
-            <height>20</height>
-           </size>
-          </property>
-         </spacer>
+         </widget>
         </item>
         <item>
-         <widget class="QPlainTextEdit" name="sendTxt">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
+         <widget class="QComboBox" name="baudCombo">
+          <property name="currentText">
+           <string>115200</string>
           </property>
-          <property name="minimumSize">
-           <size>
-            <width>550</width>
-            <height>148</height>
-           </size>
+          <property name="currentIndex">
+           <number>2</number>
           </property>
-          <property name="maximumSize">
-           <size>
-            <width>550</width>
-            <height>148</height>
-           </size>
-          </property>
+          <item>
+           <property name="text">
+            <string>9600</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>38400</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>115200</string>
+           </property>
+          </item>
          </widget>
         </item>
        </layout>
       </item>
       <item>
-       <layout class="QVBoxLayout" name="verticalLayout_3">
+       <layout class="QHBoxLayout" name="horizontalLayout_3">
         <item>
-         <layout class="QHBoxLayout" name="horizontalLayout_1">
-          <item>
-           <widget class="QLabel" name="searchLabel">
-            <property name="text">
-             <string>搜索串口</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QComboBox" name="searchCombo"/>
-          </item>
-         </layout>
+         <widget class="QLabel" name="checkLabel">
+          <property name="text">
+           <string>校验位</string>
+          </property>
+         </widget>
         </item>
         <item>
-         <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <widget class="QComboBox" name="checkCombo">
           <item>
-           <widget class="QLabel" name="baudLabel">
-            <property name="text">
-             <string>波特率</string>
-            </property>
-           </widget>
+           <property name="text">
+            <string>无</string>
+           </property>
           </item>
           <item>
-           <widget class="QComboBox" name="baudCombo">
-            <property name="currentText">
-             <string>115200</string>
-            </property>
-            <property name="currentIndex">
-             <number>2</number>
-            </property>
-            <item>
-             <property name="text">
-              <string>9600</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>38400</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>115200</string>
-             </property>
-            </item>
-           </widget>
+           <property name="text">
+            <string>奇校验</string>
+           </property>
           </item>
-         </layout>
+          <item>
+           <property name="text">
+            <string>偶校验</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_4">
+        <item>
+         <widget class="QLabel" name="dataLabel">
+          <property name="text">
+           <string>数据位</string>
+          </property>
+         </widget>
         </item>
         <item>
-         <layout class="QHBoxLayout" name="horizontalLayout_3">
+         <widget class="QComboBox" name="dataCombo">
+          <property name="currentIndex">
+           <number>3</number>
+          </property>
           <item>
-           <widget class="QLabel" name="checkLabel">
-            <property name="text">
-             <string>校验位</string>
-            </property>
-           </widget>
+           <property name="text">
+            <string>5</string>
+           </property>
           </item>
           <item>
-           <widget class="QComboBox" name="checkCombo">
-            <item>
-             <property name="text">
-              <string>无</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>奇校验</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>偶校验</string>
-             </property>
-            </item>
-           </widget>
+           <property name="text">
+            <string>6</string>
+           </property>
           </item>
-         </layout>
+          <item>
+           <property name="text">
+            <string>7</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>8</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_5">
+        <item>
+         <widget class="QLabel" name="stopLabel">
+          <property name="text">
+           <string>停止位</string>
+          </property>
+         </widget>
         </item>
         <item>
-         <layout class="QHBoxLayout" name="horizontalLayout_4">
+         <widget class="QComboBox" name="stopCombo">
           <item>
-           <widget class="QLabel" name="dataLabel">
-            <property name="text">
-             <string>数据位</string>
-            </property>
-           </widget>
+           <property name="text">
+            <string>1</string>
+           </property>
           </item>
           <item>
-           <widget class="QComboBox" name="dataCombo">
-            <property name="currentIndex">
-             <number>3</number>
-            </property>
-            <item>
-             <property name="text">
-              <string>5</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>6</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>7</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>8</string>
-             </property>
-            </item>
-           </widget>
+           <property name="text">
+            <string>1.5</string>
+           </property>
           </item>
-         </layout>
+          <item>
+           <property name="text">
+            <string>2</string>
+           </property>
+          </item>
+         </widget>
         </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_11">
         <item>
-         <layout class="QHBoxLayout" name="horizontalLayout_5">
-          <item>
-           <widget class="QLabel" name="stopLabel">
-            <property name="text">
-             <string>停止位</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QComboBox" name="stopCombo">
-            <item>
-             <property name="text">
-              <string>1</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>1.5</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>2</string>
-             </property>
-            </item>
-           </widget>
-          </item>
-         </layout>
+         <widget class="QLabel" name="stateLabel">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>95</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::Box</enum>
+          </property>
+          <property name="text">
+           <string>串口已关闭</string>
+          </property>
+          <property name="textFormat">
+           <enum>Qt::AutoText</enum>
+          </property>
+         </widget>
         </item>
         <item>
          <widget class="QPushButton" name="ctrlSerialButton">
@@ -244,166 +266,169 @@
           </property>
          </widget>
         </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout">
         <item>
-         <layout class="QHBoxLayout" name="horizontalLayout">
-          <item>
-           <widget class="QLabel" name="sendLabel">
-            <property name="text">
-             <string>发送</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QComboBox" name="sendCombo">
-            <item>
-             <property name="text">
-              <string>ASCII</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>十六进制</string>
-             </property>
-            </item>
-           </widget>
-          </item>
-          <item>
-           <widget class="QLabel" name="recieveLabel">
-            <property name="text">
-             <string>接收</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QComboBox" name="recieveCombo">
-            <item>
-             <property name="text">
-              <string>ASCII</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>十六进制</string>
-             </property>
-            </item>
-           </widget>
-          </item>
-         </layout>
+         <widget class="QLabel" name="sendLabel">
+          <property name="text">
+           <string>发送</string>
+          </property>
+         </widget>
         </item>
         <item>
-         <layout class="QHBoxLayout" name="horizontalLayout_6">
+         <widget class="QComboBox" name="sendCombo">
           <item>
-           <widget class="QLabel" name="timeLabel1">
-            <property name="maximumSize">
-             <size>
-              <width>16777215</width>
-              <height>35</height>
-             </size>
-            </property>
-            <property name="text">
-             <string>定时发送周期</string>
-            </property>
-           </widget>
+           <property name="text">
+            <string>ASCII</string>
+           </property>
           </item>
           <item>
-           <widget class="QLineEdit" name="timeEdit">
-            <property name="maximumSize">
-             <size>
-              <width>16777215</width>
-              <height>16777215</height>
-             </size>
-            </property>
-            <property name="readOnly">
-             <bool>false</bool>
-            </property>
-           </widget>
+           <property name="text">
+            <string>十六进制</string>
+           </property>
           </item>
-          <item>
-           <widget class="QLabel" name="timeLabel2">
-            <property name="maximumSize">
-             <size>
-              <width>16777215</width>
-              <height>35</height>
-             </size>
-            </property>
-            <property name="text">
-             <string>ms</string>
-            </property>
-           </widget>
-          </item>
-         </layout>
+         </widget>
         </item>
         <item>
-         <layout class="QHBoxLayout" name="horizontalLayout_7">
-          <item>
-           <widget class="QPushButton" name="sendButton">
-            <property name="text">
-             <string>手动发送</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QCheckBox" name="timecheckBox">
-            <property name="text">
-             <string>定时发送</string>
-            </property>
-           </widget>
-          </item>
-         </layout>
+         <widget class="QLabel" name="recieveLabel">
+          <property name="text">
+           <string>接收</string>
+          </property>
+         </widget>
         </item>
         <item>
-         <layout class="QHBoxLayout" name="horizontalLayout_8">
+         <widget class="QComboBox" name="recieveCombo">
           <item>
-           <widget class="QPushButton" name="saveButton">
-            <property name="text">
-             <string>保存数据</string>
-            </property>
-           </widget>
+           <property name="text">
+            <string>ASCII</string>
+           </property>
           </item>
           <item>
-           <widget class="QPushButton" name="readButton">
-            <property name="text">
-             <string>加载文件</string>
-            </property>
-           </widget>
+           <property name="text">
+            <string>十六进制</string>
+           </property>
           </item>
-         </layout>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_6">
+        <item>
+         <widget class="QLabel" name="timeLabel1">
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>35</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>定时发送周期</string>
+          </property>
+         </widget>
         </item>
         <item>
-         <layout class="QHBoxLayout" name="horizontalLayout_9">
-          <item>
-           <widget class="QLabel" name="pathLabel">
-            <property name="text">
-             <string>文件路径</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QLineEdit" name="pathEdit">
-            <property name="readOnly">
-             <bool>true</bool>
-            </property>
-           </widget>
-          </item>
-         </layout>
+         <widget class="QLineEdit" name="timeEdit">
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="readOnly">
+           <bool>false</bool>
+          </property>
+         </widget>
         </item>
         <item>
-         <layout class="QHBoxLayout" name="horizontalLayout_10">
-          <item>
-           <widget class="QPushButton" name="clearRecButton">
-            <property name="text">
-             <string>清空接收</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QPushButton" name="clearSendButton">
-            <property name="text">
-             <string>清空发送</string>
-            </property>
-           </widget>
-          </item>
-         </layout>
+         <widget class="QLabel" name="timeLabel2">
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>35</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>ms</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_7">
+        <item>
+         <widget class="QPushButton" name="sendButton">
+          <property name="text">
+           <string>手动发送</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="timecheckBox">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="text">
+           <string>定时发送</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_8">
+        <item>
+         <widget class="QPushButton" name="saveButton">
+          <property name="text">
+           <string>保存数据</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="readButton">
+          <property name="text">
+           <string>加载文件</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_9">
+        <item>
+         <widget class="QLabel" name="pathLabel">
+          <property name="text">
+           <string>文件路径</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="pathEdit">
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_10">
+        <item>
+         <widget class="QPushButton" name="clearRecButton">
+          <property name="text">
+           <string>清空接收</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="clearSendButton">
+          <property name="text">
+           <string>清空发送</string>
+          </property>
+         </widget>
         </item>
        </layout>
       </item>
